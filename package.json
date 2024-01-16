@@ -6,7 +6,6 @@
   "scripts": {
     "dev": "vite",
     "publish-plugin": "brevity plugin publish patch -c ./src/plugin-config.json",
-    "build": "tsc && vite build",
     "format": "prettier --write '**/*.{ts,tsx,js,jsx,json,md,css,html}'",
     "check": "tsc -p tsconfig.json --noEmit",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
