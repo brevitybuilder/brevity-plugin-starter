@@ -24,7 +24,7 @@
     "zustand": "^4.5.2"
   },
   "devDependencies": {
-    "@brevity-builder/cli": "^1.2.17",
+    "@brevity-builder/cli": "^1.2.53",
     "@builder.io/partytown": "^0.10.2",
     "@storybook/addon-essentials": "^8.0.10",
     "@storybook/addon-interactions": "^8.0.10",
@@ -43,6 +43,7 @@
     "storybook": "^8.0.10",
     "typescript": "^5.4.5",
     "typescript-plugin-css-modules": "^5.1.0",
+    "use-sync-external-store": "^1.2.2",
     "vite": "^5.2.11"
   }
 }
