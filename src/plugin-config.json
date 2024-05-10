@@ -72,6 +72,7 @@
       "actions": []
     }
   ],
+  "schemas": [],
   "serverActions": [
     {
       "name": "my-server-action",
