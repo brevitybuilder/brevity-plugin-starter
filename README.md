@@ -8,7 +8,7 @@ Publish via CLI or use `pnpm run publish-plugin`.
 
 Blocks and actions let you create additional functionality for the editor. 
 
-**Blocks** let you create new blocks you can add to the canvas. You can create blocks in `src/blocks`.
+**Blocks** let you create new visual blocks you can add to the canvas. You can create blocks in `src/blocks`.
 
 Blocks require the following information in `plugin-config.json`:
 - `name` - User-facing name (string)
@@ -21,7 +21,7 @@ Blocks require the following information in `plugin-config.json`:
 - `sources` - Array
 - `actions` - Array
 
-**Actions** let you handle backend logic on the server. You can create actions in `src/actions`.
+**Actions** let you handle backend logic on the server, which are triggered in frontend workflows. You can create actions in `src/actions`.
 
 Please note that these run on Cloudflare Workers, which use a runtime that is built on the V8 JavaScript and WebAssembly engine but is not Node. Some Node-specific features may not be supported.
 
