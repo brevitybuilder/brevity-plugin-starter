@@ -10,37 +10,37 @@ Blocks and actions let you create additional functionality for the editor.
 
 **Blocks** let you create new visual blocks you can add to the canvas. You can create blocks in `src/blocks`.
 
-Blocks require the following information in `plugin-config.json`:
+Blocks require the following information in `src/plugin-config.json`:
 - `name` - User-facing name (string)
-- `entrypoint` - Path to component file (string, relative URL path)
+- `entrypoint` - Path to component file (string, relative file path)
 - `acceptsChildren` - If you can nest block elements in the editor (boolean)
 - `category` - Type of block element to use (string)
 - `props` - List of prop objects (array of objects)
-- `events` - Array
-- `defaultStyles` - An object with CSS properties written in JSON format
-- `sources` - Array
-- `actions` - Array
+- `events` - List (array)
+- `defaultStyles` - CSS properties written in JSON format (object)
+- `sources` - List (array)
+- `actions` - List (array)
 
 **Actions** let you handle backend logic on the server, which are triggered in frontend workflows. You can create actions in `src/actions`.
 
 Please note that these run on Cloudflare Workers, which use a runtime that is built on the V8 JavaScript and WebAssembly engine but is not Node. Some Node-specific features may not be supported.
 
-Actions require the following information in `plugin-config.json`:
+Actions require the following information in `src/plugin-config.json`:
 - `name` - Label (string, can only use alphanumeric characters, and underscore and dashes)
-- `description` - String to describe the plugin
-- `entrypoint` - Path to component file
-- `props` - Array of prop objects
-- `outputType` - Object that lists kind
+- `description` - Text to explain the plugin, appears in plugin list (string)
+- `entrypoint` - Path to component file (string, relative file path)
+- `props` - List of props (array of objects)
+- `outputType` - What is returned by the action (object)
 
 ## Schemas
 
 You can add custom data types to your plugin in the `schemas` field in `src/plugin-config.json`. These data types are available to the user throughout the editor.
 
 Each schema requires:
-- `id` - Unique ID
-- `type` - Data type
-- `properties` - Object of properties (with associated types)
-- `required` - Array of required properties
+- `id` - Unique user-facing ID (string)
+- `type` - Data type (string)
+- `properties` - List of properties included in data type (nested object with associated types)
+- `required` - List of names of required properties (string array)
 
 ## Plugin settings
 
