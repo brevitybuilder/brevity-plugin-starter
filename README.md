@@ -1,14 +1,12 @@
 # Brevity Plugin Starter
 
-This template provides a minimal setup to get a plugin added to Brevity. You can add schemas, blocks, and server actions.
+This template provides a minimal setup to get a plugin added to Brevity. You can add blocks, server actions, and custom schemas.
 
 Publish via CLI or use `pnpm run publish-plugin`.
 
-## Blocks and actions
+## Blocks
 
-Blocks and actions let you create additional functionality for the editor. 
-
-**Blocks** let you create new visual blocks you can add to the canvas. You can create blocks in `src/blocks`.
+You can add new visual blocks users can include in the canvas and on their apps. You can create blocks in `src/blocks`.
 
 Blocks require the following information in `src/plugin-config.json`:
 - `name` - User-facing name (string)
@@ -21,7 +19,9 @@ Blocks require the following information in `src/plugin-config.json`:
 - `sources` - List (array)
 - `actions` - List (array)
 
-**Actions** let you handle backend logic on the server, which are triggered in frontend workflows. You can create actions in `src/actions`.
+## Actions
+
+You can handle backend logic on the server, which is triggered in frontend workflows. You can create actions in `src/actions`.
 
 Please note that these run on Cloudflare Workers, which use a runtime that is built on the V8 JavaScript and WebAssembly engine but is not Node. Some Node-specific features may not be supported.
 
