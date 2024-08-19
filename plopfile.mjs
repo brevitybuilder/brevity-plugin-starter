@@ -12,7 +12,7 @@ export default function (plop) {
       {
         type: "add",
         path: "src/blocks/{{dashCase name}}/index.tsx",
-        templateFile: "templates/block.tsx.hbs",
+        templateFile: "templates/index.tsx.hbs",
       },
       {
         type: "add",
